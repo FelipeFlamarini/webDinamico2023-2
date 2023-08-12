@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <form action="">
+        <h1>Média aritmética de 3 números</h1>
+        <input type="number" id="n1" placeholder="Primeiro número">
+        <input type="number" id="n2" placeholder="Segundo número">
+        <input type="number" id="n3" placeholder="Terceiro número">
+        <button type="button" id="average" onclick="getAverage()">Obter média aritmética</button>
+    </form>
+
+    <h1 id="write"></h1>
+
+    <script>
+        function getAverage() {
+            let n1 = Number(document.getElementById("n1").value)
+            let n2 = Number(document.getElementById("n2").value)
+            let n3 = Number(document.getElementById("n3").value)
+            let average = (n1 + n2 + n3) / 3
+            // alert(average)
+
+            document.getElementById("write").innerText = `Média = ${average}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="employeeName" placeholder="Nome do funcionário">
+        <input type="number" id="employeeSalary"placeholder="Salário do funcionário">
+        <button type="button" onclick="raise(10)">Obter novo salário</button>
+    </form>
+    <h1 id="newSalary"></h1>
+    
+    <script>
+        // Faça um programa que entre com o nome e o salário de um funcionário e mostre seu
+        // novo salário, sabendo que o mesmo teve um aumento de 10%.
+
+        function raise(raisePercentage) {
+            let employeeName = document.getElementById("employeeName").value
+            let employeeSalary = Number(document.getElementById("employeeSalary").value)
+
+            document.getElementById("newSalary").innerText = `O novo salário de ${employeeName} é R$${employeeSalary * (1 + raisePercentage * 0.01)}`
+        }
+    </script>
+</body>
+</html>

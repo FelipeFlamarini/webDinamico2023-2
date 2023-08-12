@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="n1">
+        <input type="number" id="n2">
+        <button type="button" onclick="sumIfEqual()">Somar ou multiplicar</button>
+    </form>
+    <h1 id="ifEqual"></h1>
+    <h1 id="result"></h1>
+    <script>
+        // Faça um algoritmo que leia dois valores inteiros A e B se os valores forem iguais devem
+        // ser somados os dois, caso contrário multiplique A por B ao final do cálculo ao final do
+        // cálculo atribuir o valor para uma variável C.
+
+        function sumIfEqual() {
+            let A = Number(document.getElementById("n1").value)
+            let B = Number(document.getElementById("n2").value)
+            let ifEqual = document.getElementById("ifEqual")
+            let result = document.getElementById("result")
+
+            if (A == B) { // soma
+                ifEqual.innerText = `Os números são iguais`
+                result.innerText = `Sua soma é ${A + B}`
+            }
+            else {
+                ifEqual.innerText = `Os números não são iguais`
+                let C = A * B
+                result.innerText = `O valor da variável C é ${C}`
+            }
+
+        }
+    </script>
+</body>
+</html>
