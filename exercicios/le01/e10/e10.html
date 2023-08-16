@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="age">
+        <button type="button">Enviar</button>
+    </form>
+    <h1 id="result"></h1>
+    <script>
+        // Faça um programa que leia a idade de um nadador e classifique-o numa das seguintes
+        // categorias abaixo:
+        // • Adulto (idade >= 18);
+        // • Juvenil (idade >= 14);
+        // • Infantil (idade >=9);
+        // • Mirim (Idade < 9).
+        function verify() {
+            let age = document.getElementById("age").value
+            let result = document.getElementById("result")
+
+            if (age >= 18) result.innerText= `O nadador de ${age} anos está na categoria Adulto`
+            else if (age >= 14) result.innerText = `O nadador de ${age} anos está na categoria Juvenil`
+            else if (age >= 9) result.innerText = `O nadador de ${age} anos está na categoria Infantil`
+            else result.innerText = `O nadador de ${age} anos está na categoria Mirim`
+        }
+    </script>
+</body>
+</html>

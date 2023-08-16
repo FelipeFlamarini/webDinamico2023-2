@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="number">
+        <button type="button" onclick="verify()">Enviar</button>
+    </form>
+
+    <h1 id="result"></h1>
+
+    <script>
+        // Faça um programa que leia um número, verifique se este número é positivo ou negativo.
+        // Se for negativo mostre a mensagem "Você digitou um numero negativo", Senão
+        // mostre:" Você digitou um número positivo.
+        function verify(){
+            let number = Number(document.getElementById("number").value)
+            let result = document.getElementById("result")
+
+            if (number < 0) result.innerHTML = "Você digitou um número negativo."   
+            else result.innerHTML = "Você digitou um número positivo."
+        }
+    </script>
+</body>
+</html>

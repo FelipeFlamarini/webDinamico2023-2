@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 06</title>
+    <title>Exercicio 05</title>
 </head>
 <body>
+    <form action="">
+        <label for="subject1">Nota de Matemática</label>
+        <input type="number" name="subject1" id="subject1">
+        <br>
+        <label for="subject2">Nota de Física</label>
+        <input type="number" name="subject2" id="subject2">
+        <br>
+        <label for="subject3">Nota de Química</label>
+        <input type="number" name="subject3" id="subject3">
+        <br>
+        <input type="button" onclick="calcularMedia()" value="Enviar">
+    </form>
+    <h1 id="result"></h1>
     
+    <script>
+        // Faça um algoritmo que leia o nome e as três notas de uma disciplina de um aluno e ao
+        // final escreva o nome do aluno, sua média e se ele foi aprovado, sabendo-se que a média   
+        // para aprovação é igual ou superior a 8.
+        function calcularMedia() {           
+            let subject1 = document.getElementById("subject1");
+            let subject2 = document.getElementById("subject2");
+            let subject3 = document.getElementById("subject3");
+
+            let media = (Number(subject1.value) + Number(subject2.value) + Number(subject3.value)) / 3;
+
+            if (!isInt(media)) {
+                    let mediaSplit = String(media).split(".")
+                    media = mediaSplit[0] + "." + mediaSplit[1].slice(0,2)
+                }
+
+            let result = document.getElementById("result")
+            
+            if (media >= 8) {
+                result.style.color = "#009900"
+                result.innerText = `O aluno foi aprovado com nota ${media}`
+            } else {
+                result.style.color = "#FF0000"
+                result.innerText = `O aluno foi reprovado com nota ${media}`
+            }
+        }
+
+            function isInt(number) {
+            return number % 1 == 0
+        }
+    </script>
 </body>
 </html>
