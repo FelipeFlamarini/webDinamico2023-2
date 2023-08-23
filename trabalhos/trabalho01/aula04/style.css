@@ -1,0 +1,76 @@
+body {
+  background-color: black;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 3rem;
+}
+.mainContainer .mainForm, .mainContainer .contacts {
+  text-align: center;
+  width: 20rem;
+  padding: 3rem;
+  border: 1px solid blue;
+  border-radius: 2rem;
+  margin: 0 auto;
+  background-color: skyblue;
+}
+.mainContainer .mainForm p {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.mainContainer .mainForm form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 2rem;
+}
+.mainContainer .mainForm form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.mainContainer .mainForm form div label {
+  font-size: 1.5rem;
+}
+.mainContainer .mainForm form div input {
+  text-align: center;
+}
+.mainContainer .mainForm form button {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  background-color: blue;
+  color: white;
+  border: 1px solid white;
+}
+.mainContainer .contacts #contactsTable tbody tr td:nth-child(1) {
+  width: 1rem;
+}
+.mainContainer .contacts #contactsTable tbody tr td:nth-child(2) {
+  width: 2rem;
+}
+.mainContainer .contacts #contactsTable tbody tr td:nth-child(3) {
+  width: 10rem;
+}
+.mainContainer .contacts #contactsTable tbody tr td .delete {
+  background-color: tomato;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
