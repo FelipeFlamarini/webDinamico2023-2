@@ -36,10 +36,10 @@ function updateTable() {
 function newRow(contact, index) {
     const line = document.createElement("tr");
     line.innerHTML = `
-    <td>${index}</td>
-    <td>${contact.name}</td>
-    <td>${contact.phone}</td>
-    <td><button class="delete" onclick="deleteEntry(${index})"">Delete</button></td>
+    <td colspan="1">${index+1}</td>
+    <td colspan="3">${contact.name}</td>
+    <td colspan="3">${contact.phone}</td>
+    <td colspan="1"><button class="delete" onclick="deleteEntry(${index})"">Delete</button></td>
     `;
 
     document.querySelector("#contactsTable>tbody").appendChild(line);
@@ -56,6 +56,6 @@ function deleteEntry(index) {
         return entry !== ""
     })
     setLocalStorage(bd_contacts)
-    alert(`Entrada deletada com sucesso`)
+    // alert(`Entrada deletada com sucesso`)
     updateTable()
 }

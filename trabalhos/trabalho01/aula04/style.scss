@@ -15,7 +15,7 @@ body {
 
     .mainForm, .contacts {
         text-align: center;
-        width: 20rem;
+        width: 30rem;
         padding: 3rem;
         border: 1px solid blue;
         border-radius: 2rem;
@@ -67,27 +67,27 @@ body {
     }
 
     .contacts {
+
+        h2 {
+            padding: 0;
+            margin: 0;
+            margin-bottom: .5rem
+        }
+
         #contactsTable {
+            width: 100%;
+
             tbody tr {
-                td:nth-child(1) {
-                    width: 1rem;
-                }
 
-                td:nth-child(2) {
-                    width: 2rem;
-                }
-
-                td:nth-child(3) {
-                    width: 10rem;
-                }
-
-                td .delete {
-                    background-color: tomato;
-                    font-weight: bold;
-                    border: 1px solid black;
-                    padding: 0.3rem;
-                    border-radius: 0.3rem;
-                    
+                td {
+                    .delete {
+                        background-color: tomato;
+                        font-weight: bold;
+                        border: 1px solid black;
+                        // padding: 0.3rem;
+                        border-radius: 0.3rem;
+                        
+                    }
                 }
             }
         }
