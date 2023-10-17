@@ -17,6 +17,6 @@ const phraseSplit = phrase.split('');
 phraseSplit.forEach(letter => {
     if (vowels.includes(letter)) vowelsCount++;
     else if (consonants.includes(letter)) consonantsCount++;
-})
+});
 
-console.log(`A frase possui ${vowelsCount} vogais e ${consonantsCount} consoantes`)
+console.log(`A frase possui ${vowelsCount} vogais e ${consonantsCount} consoantes`);
